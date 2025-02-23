@@ -1,0 +1,11 @@
+body {
+  background: linear-gradient(to bottom, #ff6b6b, #faf3e0);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 94vh;
+}
+
+@font-face {
+  font-family: Timer-Font;
+  src: url();
+}
