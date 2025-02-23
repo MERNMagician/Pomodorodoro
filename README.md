@@ -1,3 +1,5 @@
+A pomodoro timer that can be used as an learning system to learn coding and other skills
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
