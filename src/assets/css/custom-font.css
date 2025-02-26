@@ -1,0 +1,13 @@
+@font-face {
+  font-family: arch-font;
+  src: url(../fonts/webfontkit-20250210-004354/sf_arch_rival-webfont.woff)
+      format(woff),
+    url(../fonts/webfontkit-20250210-004354/sf_arch_rival-webfont.woff2)
+      format(woff2);
+  font-style: normal;
+  font-weight: normal;
+}
+
+.clock-timer {
+  font-family: arch-font;
+}

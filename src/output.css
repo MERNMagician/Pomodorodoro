@@ -6,11 +6,13 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-600: oklch(0.577 0.245 27.325);
+    --color-yellow-500: oklch(0.795 0.184 86.047);
+    --color-green-600: oklch(0.627 0.194 149.214);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --radius-lg: 0.5rem;
-    --radius-2xl: 1rem;
     --default-font-family: var(--font-sans);
     --default-font-feature-settings: var(--font-sans--font-feature-settings);
     --default-font-variation-settings: var(
@@ -176,14 +178,35 @@
   .relative {
     position: relative;
   }
+  .top-40 {
+    top: calc(var(--spacing) * 40);
+  }
   .top-50 {
     top: calc(var(--spacing) * 50);
   }
   .right-105 {
     right: calc(var(--spacing) * 105);
   }
-  .mt-10 {
-    margin-top: calc(var(--spacing) * 10);
+  .container {
+    width: 100%;
+    @media (width >= 40rem) {
+      max-width: 40rem;
+    }
+    @media (width >= 48rem) {
+      max-width: 48rem;
+    }
+    @media (width >= 64rem) {
+      max-width: 64rem;
+    }
+    @media (width >= 80rem) {
+      max-width: 80rem;
+    }
+    @media (width >= 96rem) {
+      max-width: 96rem;
+    }
+  }
+  .mt-\[140px\] {
+    margin-top: 140px;
   }
   .block {
     display: block;
@@ -200,35 +223,14 @@
   .table {
     display: table;
   }
-  .h-\[100px\] {
-    height: 100px;
-  }
-  .h-\[130px\] {
-    height: 130px;
-  }
-  .h-\[150px\] {
-    height: 150px;
-  }
-  .h-\[200px\] {
-    height: 200px;
-  }
-  .w-10 {
-    width: calc(var(--spacing) * 10);
-  }
-  .w-\[60px\] {
-    width: 60px;
-  }
-  .w-\[100px\] {
-    width: 100px;
-  }
   .w-\[120px\] {
     width: 120px;
   }
-  .w-\[200px\] {
-    width: 200px;
-  }
   .border-collapse {
     border-collapse: collapse;
+  }
+  .cursor-pointer {
+    cursor: pointer;
   }
   .resize {
     resize: both;
@@ -239,53 +241,29 @@
   .items-center {
     align-items: center;
   }
-  .justify-center {
-    justify-content: center;
-  }
   .gap-3 {
     gap: calc(var(--spacing) * 3);
   }
   .gap-5 {
     gap: calc(var(--spacing) * 5);
   }
-  .gap-8 {
-    gap: calc(var(--spacing) * 8);
-  }
   .gap-10 {
     gap: calc(var(--spacing) * 10);
-  }
-  .gap-15 {
-    gap: calc(var(--spacing) * 15);
-  }
-  .gap-20 {
-    gap: calc(var(--spacing) * 20);
-  }
-  .gap-\[10px\] {
-    gap: 10px;
   }
   .gap-\[20px\] {
     gap: 20px;
   }
-  .rounded {
-    border-radius: 0.25rem;
+  .gap-\[50px\] {
+    gap: 50px;
   }
   .rounded-\[20px\] {
     border-radius: 20px;
   }
+  .rounded-\[120px\] {
+    border-radius: 120px;
+  }
   .rounded-lg {
     border-radius: var(--radius-lg);
-  }
-  .rounded-l-2xl {
-    border-top-left-radius: var(--radius-2xl);
-    border-bottom-left-radius: var(--radius-2xl);
-  }
-  .rounded-l-\[15px\] {
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-  }
-  .rounded-r-\[15px\] {
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
   }
   .border {
     border-style: var(--tw-border-style);
@@ -309,8 +287,23 @@
   .border-black {
     border-color: var(--color-black);
   }
+  .bg-\[\#56666B\] {
+    background-color: #56666B;
+  }
+  .bg-black {
+    background-color: var(--color-black);
+  }
+  .bg-green-600 {
+    background-color: var(--color-green-600);
+  }
+  .bg-red-600 {
+    background-color: var(--color-red-600);
+  }
   .bg-white {
     background-color: var(--color-white);
+  }
+  .bg-yellow-500 {
+    background-color: var(--color-yellow-500);
   }
   .p-2 {
     padding: calc(var(--spacing) * 2);
@@ -327,11 +320,29 @@
   .font-\[Jetbrains_Mono\] {
     font-family: Jetbrains Mono;
   }
-  .font-\[MonoLisa\] {
-    font-family: MonoLisa;
+  .text-\[00px\] {
+    font-size: 00px;
+  }
+  .text-\[30px\] {
+    font-size: 30px;
+  }
+  .text-\[40px\] {
+    font-size: 40px;
+  }
+  .text-\[50px\] {
+    font-size: 50px;
+  }
+  .text-\[80px\] {
+    font-size: 80px;
   }
   .text-\[100px\] {
     font-size: 100px;
+  }
+  .text-\[200px\] {
+    font-size: 200px;
+  }
+  .text-white {
+    color: var(--color-white);
   }
   .underline {
     text-decoration-line: underline;
@@ -345,17 +356,10 @@
       text-align: center;
     }
   }
-  .hover\:bg-black {
+  .hover\:opacity-50 {
     &:hover {
       @media (hover: hover) {
-        background-color: var(--color-black);
-      }
-    }
-  }
-  .hover\:text-white {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-white);
+        opacity: 50%;
       }
     }
   }
